@@ -1,0 +1,14 @@
+src/
+__tests__/
+__tests_/
+tests/
+docs/
+benchmark/
+*.test.ts
+*.spec.ts
+*.sql
+*.md
+tsconfig.json
+tsup.config.ts
+vitest.config.*
+.gitignore

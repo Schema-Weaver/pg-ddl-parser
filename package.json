@@ -1,0 +1,52 @@
+{
+  "name": "pg-ddl-parser",
+  "version": "4.0.0",
+  "description": "Zero-dependency PostgreSQL DDL parser for PG12-PG19. Converts CREATE/ALTER/DROP SQL into a structured schema model.",
+  "license": "MIT",
+  "author": "Schema Weaver",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Schema-Weaver/pg-ddl-parser.git"
+  },
+  "homepage": "https://schemaweaver.vivekmind.com",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "postgresql",
+    "pg",
+    "ddl",
+    "parser",
+    "sql",
+    "schema",
+    "database",
+    "postgres",
+    "migration",
+    "erd"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.8.3",
+    "vitest": "^4.0.18"
+  }
+}

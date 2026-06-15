@@ -1,0 +1,109 @@
+// =============================================================================
+// Statement Types
+// =============================================================================
+
+import { Token, Position } from './base';
+
+export type StatementType =
+    | 'CREATE_TABLE'
+    | 'CREATE_TABLE_PARTITION'
+    | 'CREATE_TABLE_LIKE'
+    | 'CREATE_INDEX'
+    | 'CREATE_VIEW'
+    | 'CREATE_MATERIALIZED_VIEW'
+    | 'CREATE_FUNCTION'
+    | 'CREATE_PROCEDURE'
+    | 'CREATE_TRIGGER'
+    | 'CREATE_POLICY'
+    | 'CREATE_ENUM'
+    | 'CREATE_TYPE'
+    | 'CREATE_DOMAIN'
+    | 'CREATE_SEQUENCE'
+    | 'CREATE_SCHEMA'
+    | 'CREATE_EXTENSION'
+    | 'CREATE_ROLE'
+    | 'CREATE_AGGREGATE'
+    | 'ALTER_TABLE'
+    | 'ALTER_TABLE_ADD_COLUMN'
+    | 'ALTER_TABLE_DROP_COLUMN'
+    | 'ALTER_TABLE_ALTER_COLUMN'
+    | 'ALTER_TABLE_ADD_CONSTRAINT'
+    | 'ALTER_TABLE_DROP_CONSTRAINT'
+    | 'ALTER_TABLE_VALIDATE_CONSTRAINT'
+    | 'ALTER_TABLE_NOT_VALID'
+    | 'ALTER_TABLE_NO_INHERIT'
+    | 'ALTER_TABLE_INHERIT'
+    | 'DROP_TABLE'
+    | 'COMMENT'
+    | 'GRANT'
+    | 'REVOKE'
+    | 'SET'
+    | 'VACUUM'
+    | 'ANALYZE'
+    | 'COPY'
+    | 'REPACK'
+    | 'CREATE_PROPERTY_GRAPH'
+    | 'DROP_PROPERTY_GRAPH'
+    | 'GRAPH_TABLE'
+    | 'WAIT_FOR_LSN'
+    | 'PUBLICATION'
+    | 'SUBSCRIPTION'
+    | 'CREATE_RULE'
+    | 'CREATE_STATISTICS'
+    | 'CREATE_COLLATION'
+    | 'DROP_VIEW'
+    | 'DROP_INDEX'
+    | 'DROP_FUNCTION'
+    | 'DROP_TYPE'
+    | 'DROP_SEQUENCE'
+    | 'DROP_SCHEMA'
+    | 'DROP_DATABASE'
+    | 'DROP_ROLE'
+    | 'DROP_EXTENSION'
+    | 'DROP_MATERIALIZED_VIEW'
+    | 'DROP_AGGREGATE'
+    | 'DROP_OPERATOR'
+    | 'DROP_DOMAIN'
+    | 'DROP_CAST'
+    | 'DROP_CONVERSION'
+    | 'DROP_TRANSFORM'
+    | 'DROP_FOREIGN_TABLE'
+    | 'DROP_SERVER'
+    | 'DROP_USER_MAPPING'
+    | 'DROP_STATISTICS'
+    | 'DROP_EVENT_TRIGGER'
+    | 'DROP_SUBSCRIPTION'
+    | 'DROP_PUBLICATION'
+    | 'DROP_FOREIGN_DATA_WRAPPER'
+    | 'DROP_LARGE_OBJECT'
+    | 'DROP_TEXT_SEARCH_DICTIONARY'
+    | 'DROP_TEXT_SEARCH_CONFIGURATION'
+    | 'DROP_TEXT_SEARCH_PARSER'
+    | 'DROP_TEXT_SEARCH_TEMPLATE'
+    | 'DROP_COLLATION'
+    | 'DROP_POLICY'
+    | 'DROP_TRIGGER'
+    | 'DROP_RULE'
+    | 'UNKNOWN';
+
+export interface StatementInfo {
+    text: string;
+    type: StatementType;
+    tokens: Token[];
+    namespace: {
+        schemaName?: string;
+        objectName?: string;
+        objectType?: string;
+        temporary?: boolean;
+        ifNotExists?: boolean;
+        orReplace?: boolean;
+    };
+    dependencies: {
+        schemas: string[];
+        tables: string[];
+        types: string[];
+        functions: string[];
+    };
+    position: Position;
+    confidence: number;
+}
