@@ -189,7 +189,9 @@ This dual-strategy approach means the parser gracefully degrades on malformed SQ
 
 ## License
 
-MIT — see [LICENSE](./LICENSE)
+Business Source License 1.1 (BSL) — see [LICENSE](./LICENSE)
+
+Free for non-production use, local development, and testing. Requires a commercial license for production use.
 
 ---
 
