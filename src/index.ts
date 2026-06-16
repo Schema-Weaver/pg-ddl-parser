@@ -1,4 +1,4 @@
-/**
+/*!
  * pg-ddl-parser - Enterprise PostgreSQL Parser v4.0
  * 
  * LICENSE NOTICE:
