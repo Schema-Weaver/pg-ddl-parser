@@ -1,7 +1,7 @@
 # pg-ddl-parser
 
 [![npm version](https://img.shields.io/npm/v/pg-ddl-parser.svg)](https://www.npmjs.com/package/pg-ddl-parser)
-[![license](https://img.shields.io/npm/l/pg-ddl-parser.svg)](https://github.com/Schema-Weaver/pg-ddl-parser/blob/main/LICENSE)
+[![license](https://img.shields.io/badge/license-BSL--1.1-red.svg)](https://github.com/Schema-Weaver/pg-ddl-parser/blob/main/LICENSE)
 [![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](https://www.npmjs.com/package/pg-ddl-parser)
 
 > [!WARNING]
