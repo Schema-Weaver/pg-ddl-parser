@@ -1,6 +1,6 @@
 {
   "name": "pg-ddl-parser",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Zero-dependency PostgreSQL DDL parser for PG12-PG19. Converts CREATE/ALTER/DROP SQL into a structured schema model.",
   "license": "BUSL-1.1",
   "author": "Schema Weaver",
