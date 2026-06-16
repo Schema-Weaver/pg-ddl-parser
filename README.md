@@ -4,6 +4,13 @@
 [![license](https://img.shields.io/npm/l/pg-ddl-parser.svg)](https://github.com/Schema-Weaver/pg-ddl-parser/blob/main/LICENSE)
 [![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](https://www.npmjs.com/package/pg-ddl-parser)
 
+> [!WARNING]
+> **Commercial Use License Required**
+> 
+> This package is licensed under the **Business Source License 1.1 (BSL)**. It is free for local development, testing, and evaluation purposes, but **requires a separate paid commercial license for production use**.
+> 
+> For commercial licensing options and inquiries, please contact: **vivek@vivekmind.com**
+
 **Zero-dependency PostgreSQL DDL parser** that converts `CREATE`, `ALTER`, and `DROP` SQL statements into a fully typed `ParsedSchema` object model. Supports PostgreSQL 12 through 19 syntax including partitioning, temporal tables, property graphs, row-level security, and 60+ statement types. Runs in the browser and Node.js.
 
 ---
